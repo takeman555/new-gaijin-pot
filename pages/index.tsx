@@ -99,33 +99,79 @@ export default function Home() {
 
         {/* Why Sanuki Section */}
         <section id="sanuki" className="py-24">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row gap-16 items-center">
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8">Why Sanuki City is the <span className="text-primary italic">Optimal Choice</span></h2>
-              <div className="space-y-8">
-                {[
-                  { title: "Seamless Office Compliance", desc: "Forget high-priced urban offices. Our properties are guaranteed to meet immigration requirements instantly and affordably." },
-                  { title: "World-Class Family Life", desc: "With high-quality international schools and low cost of living, your family thrives while you build your legacy." },
-                  { title: "Immersive Japanese Mastery", desc: "Living in Sanuki accelerates language skills through natural community immersion compared to 'expat bubbles'." },
-                  { title: "Triple Community Power", desc: "Three specialized entrepreneur communities in Sanuki are ready to provide mentorship, networking, and local support." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4">
-                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                      {i + 1}
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
+              <div className="lg:w-1/2">
+                <h2 className="text-4xl md:text-5xl font-bold mb-8">Why Sanuki City is the <span className="text-primary italic">Optimal Choice</span></h2>
+                <div className="space-y-8">
+                  {[
+                    { title: "Seamless Office Compliance", desc: "Forget high-priced urban offices. Our properties are guaranteed to meet immigration requirements instantly and affordably." },
+                    { title: "World-Class Family Life", desc: "With high-quality international schools and low cost of living, your family thrives while you build your legacy." },
+                    { title: "Immersive Japanese Mastery", desc: "Living in Sanuki accelerates language skills through natural community immersion compared to 'expat bubbles'." },
+                  ].map((item, i) => (
+                    <div key={i} className="flex gap-4">
+                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
+                        {i + 1}
+                      </div>
+                      <div>
+                        <h4 className="text-xl font-bold mb-2">{item.title}</h4>
+                        <p className="text-secondary leading-relaxed">{item.desc}</p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                      <p className="text-secondary leading-relaxed">{item.desc}</p>
+                  ))}
+                </div>
+              </div>
+              <div className="lg:w-1/2 grid grid-cols-2 gap-4">
+                <div className="h-64 bg-slate-100 rounded-3xl" />
+                <div className="h-64 bg-primary/10 rounded-3xl" />
+                <div className="h-64 bg-primary rounded-3xl" />
+                <div className="h-64 bg-slate-200 rounded-3xl" />
+              </div>
+            </div>
+
+            {/* Communities Subsection */}
+            <div className="bg-primary/5 rounded-[3rem] p-12 md:p-20">
+              <div className="max-w-3xl mb-16">
+                <span className="text-primary font-bold tracking-widest uppercase text-xs">Triple Support Ecosystem</span>
+                <h3 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Built by Entrepreneurs, For Entrepreneurs</h3>
+                <p className="text-lg text-secondary">Sanuki isn't just a place; it's a network. Three distinct communities collaborate to ensure you have the right mentors, partners, and talent from day one.</p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    name: "WAOJE Sanuki",
+                    type: "Global Japanese Network",
+                    desc: "A branch of the worldwide Japanese entrepreneur network. Perfect for connecting with founders who have successfully scaled from Japan to the world.",
+                    tags: ["Global Vision", "Japanese Excellence"]
+                  },
+                  {
+                    name: "Kagawa Innovation Base",
+                    type: "Inclusive Hub",
+                    desc: "The most open gateway for anyone interested in entrepreneurship in Kagawa. Fully accessible in English, bridging foreign founders with local innovators.",
+                    tags: ["English Support", "Local Integration"]
+                  },
+                  {
+                    name: "PLH Generative AI Club",
+                    type: "Deep-Tech Support",
+                    desc: "Master generative AI to become a high-efficiency solo-preneur or find your future CTO. This is where cutting-edge technology meets execution.",
+                    tags: ["AI Implementation", "CTO Matching"]
+                  }
+                ].map((community, i) => (
+                  <div key={i} className="bg-background rounded-3xl p-8 shadow-sm border border-foreground/5 hover:border-primary/30 transition-all group">
+                    <span className="text-primary text-xs font-bold px-2 py-1 rounded bg-primary/5 mb-4 inline-block">{community.type}</span>
+                    <h4 className="text-2xl font-bold mb-4">{community.name}</h4>
+                    <p className="text-sm text-secondary leading-relaxed mb-6 italic">"{community.desc}"</p>
+                    <div className="flex flex-wrap gap-2">
+                      {community.tags.map((tag, j) => (
+                        <span key={j} className="text-[10px] font-bold text-foreground/40 uppercase tracking-tighter border border-foreground/10 px-2 py-0.5 rounded-full">
+                          #{tag}
+                        </span>
+                      ))}
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-              <div className="h-64 bg-slate-100 rounded-3xl" />
-              <div className="h-64 bg-primary/10 rounded-3xl" />
-              <div className="h-64 bg-primary rounded-3xl" />
-              <div className="h-64 bg-slate-200 rounded-3xl" />
             </div>
           </div>
         </section>
