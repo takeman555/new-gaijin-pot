@@ -7,7 +7,7 @@ export default function Sanuki() {
     return (
         <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
             <Head>
-                <title>Consider Sanuki City | NewGaijinPot</title>
+                <title>Consider Sanuki City | Nihon Gateway</title>
             </Head>
 
             <Navbar />
@@ -122,7 +122,7 @@ export default function Sanuki() {
             </main>
 
             <footer className="py-12 border-t border-foreground/5 text-center text-secondary text-sm">
-                <p>© 2026 Kirirom Group - NewGaijinPot Project. All rights reserved.</p>
+                <p>© 2026 Kirirom Group - Nihon Gateway Project. All rights reserved.</p>
             </footer>
         </div>
     );

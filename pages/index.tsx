@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground font-sans selection:bg-primary/20">
       <Head>
-        <title>NewGaijinPot | Your Lifetime Gateway to Startup Success in Japan</title>
+        <title>Nihon Gateway | Your Lifetime Gateway to Success in Japan</title>
       </Head>
 
       <Navbar />
@@ -168,7 +168,7 @@ export default function Home() {
       </main>
 
       <footer className="py-12 border-t border-foreground/5 text-center text-secondary text-sm">
-        <p>© 2026 Kirirom Group - NewGaijinPot Project (Tentative). All rights reserved.</p>
+        <p>© 2026 Kirirom Group - Nihon Gateway Project. All rights reserved.</p>
       </footer>
     </div>
   );

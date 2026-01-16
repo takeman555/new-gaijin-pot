@@ -1,4 +1,4 @@
-# NewGaijinPot Business Concept (Final Renewal)
+# Nihon Gateway Business Concept (Final Renewal)
 
 ## 1. コアバリュー：日本移住の「デッドロック」完全解消
 本サービスは、日本で働きたい・住みたい外国人が直面する「AをするためにはBが必要だが、BのためにはAが必要」という**「デッドロック（行き詰まり）」**状態を解消することを核心とします。
