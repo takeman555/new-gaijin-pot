@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 
 export default function Home() {
@@ -17,14 +18,14 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
               <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-                Sanuki City: The Best Entry Point for Foreign Founders
+                Your Lifetime Gateway to Japan
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                Launch in <span className="text-primary italic">Sanuki</span>. <br />
-                Scale to <span className="text-primary">Japan</span>.
+                Dream in <span className="text-primary italic">Japan</span>. <br />
+                Live with <span className="text-primary">Purpose</span>.
               </h1>
               <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-lg">
-                Solving everything from AI-driven visa applications to quality life for your family and employees. Sustainable success starts here.
+                Whether you're a founder, student, or job seeker, we provide the Claude Code powered tools and physical setup to launch your life in Japan.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30">
@@ -216,13 +217,12 @@ export default function Home() {
             <p className="text-background/60 text-xl mb-12">
               Start your journey with our AI Visa tool or book a tour of our Sanuki City hub.
             </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-6">
-              <button className="px-12 py-5 bg-primary text-white rounded-full font-black text-xl hover:scale-105 transition-transform">
-                Launch AI Assistant
-              </button>
-              <button className="px-12 py-5 border border-white/20 text-white rounded-full font-black text-xl hover:bg-white/10 transition-colors">
-                Contact the Hub
-              </button>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/founders" className="text-sm font-bold text-primary hover:underline underline-offset-4">For Founders</Link>
+              <Link href="#solution" className="text-sm font-medium hover:text-primary transition-colors">Our Solution</Link>
+              <Link href="#contact" className="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+                Join Waitlist
+              </Link>
             </div>
           </div>
         </section>
