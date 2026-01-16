@@ -18,22 +18,23 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center">
             <div className="relative z-10">
               <span className="inline-block py-1 px-3 rounded-full bg-primary/10 text-primary text-xs font-bold tracking-widest uppercase mb-6">
-                Your Lifetime Gateway to Japan
+                All-in-One Japan Migration Platform
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                Live, Work, and <br />
-                Thrive in <span className="text-primary italic">Japan</span>.
+                Break the <span className="text-primary italic">Deadlock</span>. <br />
+                Start Your Life in Japan.
               </h1>
               <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-lg">
-                Whether you're a founder, student, or job seeker, we provide AI-driven tools and physical setup support to build your life in Japan with confidence.
+                "No visa without a job. No job without a visa." We solve this. <br />
+                From learning Japanese to getting hired and securing your home—all in one place.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/founders" className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30 text-center">
-                  I am a Founder
-                </Link>
-                <button className="px-8 py-4 border border-foreground/10 rounded-full font-bold text-lg hover:bg-foreground/5 transition-colors text-center">
-                  Start AI Visa Tool
+                <button className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30 text-center">
+                  Start Learning (Free)
                 </button>
+                <Link href="/sanuki" className="px-8 py-4 border border-foreground/10 rounded-full font-bold text-lg hover:bg-foreground/5 transition-colors text-center">
+                  Explore Sanuki Hub
+                </Link>
               </div>
             </div>
             <div className="relative">
@@ -41,7 +42,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-foreground/5 bg-white p-2">
                 <Image
                   src="/hero.png"
-                  alt="Modern Japan Startup Hero"
+                  alt="Japan Migration Success"
                   width={800}
                   height={600}
                   className="w-full h-auto rounded-xl object-cover"
@@ -52,120 +53,97 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pre-arrival & Career Core Services */}
-        <section id="solution" className="py-24 bg-foreground/[0.01]">
-          <div className="max-w-7xl mx-auto px-6 text-center">
-            <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 inline-block">Support from Day Zero</span>
-            <h2 className="text-4xl md:text-5xl font-bold mb-16">Your Bridge to a Career in Japan</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 text-left">
+        {/* 1. Admin & Legal (The Deadlock Breakers) */}
+        <section id="admin" className="py-24 bg-foreground/[0.01]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 inline-block">Step 1: The Foundation</span>
+              <h2 className="text-3xl md:text-5xl font-bold">Solving the "Impossible" First Steps</h2>
+              <p className="text-lg text-secondary mt-6">We handle the administrative hurdles that stop 90% of foreigners before they even start.</p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-8">
               {[
-                {
-                  title: "AI School Apps",
-                  desc: "Simplified pre-arrival support. Our AI helps you find and apply to the best language schools in Japan with ease.",
-                  icon: "🏫"
-                },
-                {
-                  title: "Job Guarantee",
-                  desc: "Study with confidence. We guarantee job placement after you achieve JLPT N4/N3 levels at our partner schools.",
-                  icon: "💼"
-                },
-                {
-                  title: "Nihongo AI Data",
-                  desc: "Showcase your potential. We analyze your learning speed and IQ through the Nihongo app to find your perfect job match.",
-                  icon: "🧠"
-                },
-                {
-                  title: "Free Learning",
-                  desc: "Lowering the entry barrier. Access N5 and N4 level Japanese courses for free on our platform.",
-                  icon: "🎁"
-                }
-              ].map((service, i) => (
-                <div key={i} className="p-8 bg-background rounded-3xl border border-foreground/5 shadow-sm hover:shadow-xl hover:border-primary/20 transition-all flex flex-col items-start min-h-[300px]">
-                  <div className="text-4xl mb-6">{service.icon}</div>
-                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-secondary leading-relaxed text-sm mb-6">{service.desc}</p>
-                  <div className="mt-auto group flex items-center gap-2 text-primary text-xs font-bold uppercase tracking-wider">
-                    Learn More <span className="group-hover:translate-x-1 transition-transform">→</span>
-                  </div>
+                { title: "Visa Support", desc: "Total support for Business Manager & Work visas. We analyze your career consistency to satisfy Immigration requirements.", icon: "🛂" },
+                { title: "Bank Accounts", desc: "Partnerships with Shinsei & JP Bank to open personal and corporate accounts without the usual rejections.", icon: "🏦" },
+                { title: "Driver's License", desc: "Skip the months-long wait. We assist with booking, translation, and test prep for license switching.", icon: "🚗" }
+              ].map((item, i) => (
+                <div key={i} className="bg-background p-8 rounded-3xl border border-foreground/5 shadow-sm">
+                  <div className="text-4xl mb-6">{item.icon}</div>
+                  <h3 className="text-xl font-bold mb-4">{item.title}</h3>
+                  <p className="text-secondary leading-relaxed text-sm">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 2. Career & Education (Work & Study) */}
+        <section id="career" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row gap-16 items-center">
+              <div className="lg:w-1/2">
+                <h2 className="text-3xl md:text-5xl font-bold mb-8 italic">Guaranteed <span className="text-primary">Career Path</span></h2>
+                <p className="text-lg text-secondary mb-10 leading-relaxed">
+                  Don't just study; secure your future. We integrate language learning directly with job placement through our J-Linka partnership.
+                </p>
+                <ul className="space-y-6">
+                  {[
+                    { strong: "School + Job Set", text: "Enrolling in our partner schools guarantees a job interview upon reaching N4/N3 level." },
+                    { strong: "AI Potential Evaluation", text: "Our Nihongo App analyzes your learning speed to prove your IQ and adaptability to employers, even before you speak fluent Japanese." },
+                    { strong: "Japanese Staffing", text: "For founders, we provide 100% Japanese admin staff to handle tax and bureaucracy." }
+                  ].map((li, i) => (
+                    <li key={i} className="flex gap-4">
+                      <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center text-xs font-bold flex-shrink-0">✓</div>
+                      <p className="text-secondary"><strong className="text-foreground">{li.strong}:</strong> {li.text}</p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="lg:w-1/2 bg-foreground/5 rounded-3xl p-8 lg:p-12">
+                <h3 className="text-2xl font-bold mb-6">The Success Loop</h3>
+                <div className="flex flex-col gap-4">
+                  <div className="p-4 bg-white rounded-xl shadow-sm border border-foreground/5 text-center">Step A: Free N5 Learning (Nihongo App)</div>
+                  <div className="text-center text-primary text-xl font-bold">↓</div>
+                  <div className="p-4 bg-white rounded-xl shadow-sm border border-foreground/5 text-center">Step B: Apply to Language School (AI Support)</div>
+                  <div className="text-center text-primary text-xl font-bold">↓</div>
+                  <div className="p-4 bg-white rounded-xl shadow-sm border border-foreground/5 text-center border-b-4 border-primary">Step C: Guaranteed Job Match (J-Linka)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* 3. Living & Community (Sanuki & Hubs) */}
+        <section id="living" className="py-24 bg-foreground/[0.01]">
+          <div className="max-w-7xl mx-auto px-6">
+            <div className="text-center max-w-3xl mx-auto mb-16">
+              <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 inline-block">Step 3: Quality of Life</span>
+              <h2 className="text-3xl md:text-5xl font-bold">Live Well, Not Just "Survive"</h2>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { title: "Guarantor-Free Housing", desc: "Rent beautiful homes and offices without a Japanese guarantor. We back you." },
+                { title: "Rural Transport", desc: "Access our detailed network of car-shares and foreigner-friendly taxi services." },
+                { title: "Family & Schools", desc: "International school support and online education for your children." },
+                { title: "Culture Training", desc: "Master the unspoken rules (trash sorting, noise) to live harmoniously." }
+              ].map((item, i) => (
+                <div key={i} className="p-6 bg-white rounded-2xl border border-foreground/5">
+                  <h4 className="font-bold text-lg mb-3">{item.title}</h4>
+                  <p className="text-sm text-secondary">{item.desc}</p>
                 </div>
               ))}
             </div>
 
-            {/* J-Linka Integration Callout */}
-            <div className="mt-20 p-8 md:p-12 bg-primary text-white rounded-[3rem] shadow-2xl shadow-primary/20 text-center max-w-4xl mx-auto">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 italic">Integrated with J-Linka</h3>
-              <p className="text-white/80 text-lg mb-8">Direct connection to Japan's premier job matching platform for foreign talent. Your career starts here.</p>
-              <div className="flex justify-center flex-wrap gap-4">
-                <span className="px-4 py-2 bg-white/10 rounded-full border border-white/20 text-sm font-medium">Global Network</span>
-                <span className="px-4 py-2 bg-white/10 rounded-full border border-white/20 text-sm font-medium">Bilingual Opportunities</span>
-                <span className="px-4 py-2 bg-white/10 rounded-full border border-white/20 text-sm font-medium">Visa-Sponsoring Companies</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Nihongo Learning & Evaluation */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
-            <div className="lg:w-1/2">
-              <h2 className="text-4xl md:text-5xl font-bold mb-8 italic">Data-Driven Success with <span className="text-primary italic">Nihongo App</span></h2>
-              <p className="text-lg text-secondary mb-10 leading-relaxed">
-                We go beyond self-reported skills. By integrating your learning data from the Nihongo app, we provide a verifiable profile to Japanese employers.
+            {/* Sanuki Hub Callout */}
+            <div className="mt-16 bg-gradient-to-r from-primary to-blue-600 rounded-[3rem] p-10 md:p-16 text-white text-center">
+              <h3 className="text-3xl font-bold mb-6">Need a place to think?</h3>
+              <p className="text-lg opacity-90 max-w-2xl mx-auto mb-10">
+                If you don't have a visa yet, or just want to test your fit in Japan, come to our <strong>Sanuki City Hub</strong>.
+                Stay for 1-3 months, learn the culture, and plan your career with our "Workaway" model.
               </p>
-              <div className="space-y-6">
-                {[
-                  { title: "Verifiable Potential", desc: "We track your learning speed and consistency to quantify your 'IQ' and 'Adaptability' for recruiters." },
-                  { title: "Free Entry Level Courses", desc: "Start your journey without limits. All N5 and N4 level Japanese courses are free on our platform." },
-                  { title: "Smart Interview Matching", desc: "Employers receive data-backed recommendations, ensuring you interview with companies that value your unique pace." }
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 p-6 rounded-2xl border border-foreground/5 hover:bg-primary/5 transition-colors">
-                    <div className="w-6 h-6 rounded-full bg-primary flex-shrink-0 mt-1" />
-                    <div>
-                      <h4 className="font-bold text-xl mb-2">{item.title}</h4>
-                      <p className="text-secondary text-sm">{item.desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="lg:w-1/2 relative">
-              <div className="aspect-square bg-gradient-to-br from-primary/10 to-indigo-500/10 rounded-full flex items-center justify-center p-12">
-                <div className="w-full h-full bg-white rounded-3xl shadow-2xl p-8 border border-foreground/5 relative overflow-hidden">
-                  {/* Mock Evaluation Graph */}
-                  <div className="absolute inset-0 bg-primary/5 p-8 flex flex-col justify-end">
-                    <div className="w-full h-1/2 flex items-end gap-2">
-                      <div className="w-1/4 h-3/4 bg-primary rounded-t-lg animate-pulse" />
-                      <div className="w-1/4 h-1/2 bg-primary/60 rounded-t-lg" />
-                      <div className="w-1/4 h-full bg-primary rounded-t-lg animate-pulse" />
-                      <div className="w-1/4 h-2/3 bg-primary/60 rounded-t-lg" />
-                    </div>
-                  </div>
-                  <h4 className="text-2xl font-black mb-2 relative z-10">AI Evaluated IQ: 124</h4>
-                  <p className="text-secondary text-sm relative z-10 font-bold text-primary uppercase">Adaptability: Exceptional</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Specialized Tracks Funnel */}
-        <section className="py-24">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="grid md:grid-cols-2 gap-8 text-center">
-              <div className="p-12 bg-primary/5 rounded-[3rem] border border-primary/10 hover:border-primary/30 transition-all flex flex-col items-center">
-                <h3 className="text-3xl font-bold mb-4">Founder-Focused</h3>
-                <p className="text-secondary mb-8">Specific support for businessmanager visas, offices, and co-founder matching.</p>
-                <Link href="/founders" className="mt-auto px-8 py-3 bg-primary text-white rounded-full font-bold">
-                  View Founder Track
-                </Link>
-              </div>
-              <div className="p-12 bg-foreground/[0.02] rounded-[3rem] border border-foreground/10 hover:border-foreground/30 transition-all flex flex-col items-center">
-                <h3 className="text-3xl font-bold mb-4">Consider Sanuki</h3>
-                <p className="text-secondary mb-8">Looking for the best entry point? Explore the benefits of living and building in Sanuki City.</p>
-                <Link href="/sanuki" className="mt-auto px-8 py-3 border border-foreground rounded-full font-bold">
-                  Compare Locations
-                </Link>
-              </div>
+              <Link href="/sanuki" className="inline-block px-10 py-4 bg-white text-primary rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
+                Check Sanuki Hub Program
+              </Link>
             </div>
           </div>
         </section>
@@ -175,12 +153,15 @@ export default function Home() {
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
             <h2 className="text-4xl md:text-6xl font-bold mb-8">Start Your Japan Journey</h2>
             <p className="text-background/60 text-xl mb-12">
-              Join the waiting list for our next intake and gain access to our AI tools.
+              Join the waiting list to get free access to N5 Japanese lessons and our visa consultation.
             </p>
-            <div className="flex justify-center">
+            <div className="flex justify-center flex-col sm:flex-row gap-6">
               <button className="px-12 py-5 bg-primary text-white rounded-full font-black text-xl hover:scale-105 transition-transform">
-                Join the Community
+                Start Free Learning
               </button>
+              <Link href="/founders" className="px-12 py-5 border border-white/20 text-white rounded-full font-black text-xl hover:bg-white/10 transition-colors flex items-center justify-center">
+                I am a Founder
+              </Link>
             </div>
           </div>
         </section>
