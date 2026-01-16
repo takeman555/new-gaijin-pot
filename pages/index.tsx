@@ -21,18 +21,18 @@ export default function Home() {
                 Your Lifetime Gateway to Japan
               </span>
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 leading-[1.1]">
-                Dream in <span className="text-primary italic">Japan</span>. <br />
-                Live with <span className="text-primary">Purpose</span>.
+                Live, Work, and <br />
+                Thrive in <span className="text-primary italic">Japan</span>.
               </h1>
               <p className="text-lg md:text-xl text-secondary mb-10 leading-relaxed max-w-lg">
-                Whether you're a founder, student, or job seeker, we provide the Claude Code powered tools and physical setup to launch your life in Japan.
+                Whether you're a founder, student, or job seeker, we provide AI-driven tools and physical setup support to build your life in Japan with confidence.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30">
-                  Start with Claude Code
-                </button>
-                <button className="px-8 py-4 border border-foreground/10 rounded-full font-bold text-lg hover:bg-foreground/5 transition-colors">
-                  Explore Sanuki City
+                <Link href="/founders" className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30 text-center">
+                  I am a Founder
+                </Link>
+                <button className="px-8 py-4 border border-foreground/10 rounded-full font-bold text-lg hover:bg-foreground/5 transition-colors text-center">
+                  Start AI Visa Tool
                 </button>
               </div>
             </div>
@@ -41,7 +41,7 @@ export default function Home() {
               <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-foreground/5 bg-white p-2">
                 <Image
                   src="/hero.png"
-                  alt="Sanuki City Startup Hub"
+                  alt="Modern Japan Startup Hero"
                   width={800}
                   height={600}
                   className="w-full h-auto rounded-xl object-cover"
@@ -52,160 +52,56 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Global vs Local Section */}
+        {/* The 3 Pillars Section (Generalized) */}
         <section id="solution" className="py-24 bg-foreground/[0.01]">
-          <div className="max-w-7xl mx-auto px-6">
-            <div className="text-center max-w-3xl mx-auto mb-20">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">A Three-Layer Ecosystem</h2>
-              <p className="text-xl text-secondary">From global talent matching to local community support, we cover every aspect of your business and life.</p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
+          <div className="max-w-7xl mx-auto px-6 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-16">The NewGaijinPot Way</h2>
+            <div className="grid md:grid-cols-3 gap-8 text-left">
               {[
                 {
-                  title: "Global & National",
-                  desc: "Claude Code powered visa tools for Founders and a talent hub that connects global minds with your startup in Japan.",
-                  features: ["Claude Code Visa Engine", "Talent Matching", "Market Data"],
-                  icon: "🌐"
+                  title: "AI-Driven Autonomy",
+                  desc: "Utilize Claude Code and our specialized tools to handle visa applications and administrative threads yourself, without expensive lawyers.",
+                  icon: "🤖"
                 },
                 {
-                  title: "Sanuki Local (The Hub)",
-                  desc: "The fastest way to get your office, visa, and life set up with 100% compliance and zero friction.",
-                  features: ["Instant Offices", "3 Support Communities", "Family Education"],
-                  icon: "📍"
+                  title: "Physical Foundation",
+                  desc: "We solve the 'deadlock' of bank accounts, housing, and offices through direct partnerships and physical setup support.",
+                  icon: "🏠"
                 },
                 {
-                  title: "Lifetime Support",
-                  desc: "Ensuring long-term well-being for your family and employees, from education to community immersion.",
-                  features: ["Family Integration", "Schooling Support", "Language Mastery"],
-                  icon: "❤️"
+                  title: "Tailored Options",
+                  desc: "From rural hubs like Sanuki City to nationwide talent matching, we find the optimal path for your specific goals.",
+                  icon: "🎯"
                 }
-              ].map((layer, i) => (
-                <div key={i} className="p-10 rounded-3xl bg-background border border-foreground/5 shadow-sm hover:shadow-xl transition-all group">
-                  <div className="text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">{layer.icon}</div>
-                  <h3 className="text-2xl font-bold mb-4">{layer.title}</h3>
-                  <p className="text-secondary mb-8 leading-relaxed">{layer.desc}</p>
-                  <ul className="space-y-3">
-                    {layer.features.map((f, j) => (
-                      <li key={j} className="flex items-center gap-2 text-sm font-semibold">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary" /> {f}
-                      </li>
-                    ))}
-                  </ul>
+              ].map((pillar, i) => (
+                <div key={i} className="p-8 bg-background rounded-3xl border border-foreground/5 shadow-sm">
+                  <div className="text-4xl mb-6">{pillar.icon}</div>
+                  <h3 className="text-2xl font-bold mb-4">{pillar.title}</h3>
+                  <p className="text-secondary leading-relaxed">{pillar.desc}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Why Sanuki Section */}
-        <section id="sanuki" className="py-24">
+        {/* Specialized Tracks Funnel */}
+        <section className="py-24">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row gap-16 items-center mb-24">
-              <div className="lg:w-1/2">
-                <h2 className="text-4xl md:text-5xl font-bold mb-8">Why Sanuki City is the <span className="text-primary italic">Optimal Choice</span></h2>
-                <div className="space-y-8">
-                  {[
-                    { title: "Seamless Office Compliance", desc: "Forget high-priced urban offices. Our properties are guaranteed to meet immigration requirements instantly and affordably." },
-                    { title: "World-Class Family Life", desc: "With high-quality international schools and low cost of living, your family thrives while you build your legacy." },
-                    { title: "Immersive Japanese Mastery", desc: "Living in Sanuki accelerates language skills through natural community immersion compared to 'expat bubbles'." },
-                  ].map((item, i) => (
-                    <div key={i} className="flex gap-4">
-                      <div className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold">
-                        {i + 1}
-                      </div>
-                      <div>
-                        <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                        <p className="text-secondary leading-relaxed">{item.desc}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+            <div className="grid md:grid-cols-2 gap-8 text-center">
+              <div className="p-12 bg-primary/5 rounded-[3rem] border border-primary/10 hover:border-primary/30 transition-all flex flex-col items-center">
+                <h3 className="text-3xl font-bold mb-4">Founder-Focused</h3>
+                <p className="text-secondary mb-8">Specific support for businessmanager visas, offices, and co-founder matching.</p>
+                <Link href="/founders" className="mt-auto px-8 py-3 bg-primary text-white rounded-full font-bold">
+                  View Founder Track
+                </Link>
               </div>
-              <div className="lg:w-1/2 grid grid-cols-2 gap-4">
-                <div className="h-64 bg-slate-100 rounded-3xl" />
-                <div className="h-64 bg-primary/10 rounded-3xl" />
-                <div className="h-64 bg-primary rounded-3xl" />
-                <div className="h-64 bg-slate-200 rounded-3xl" />
+              <div className="p-12 bg-foreground/[0.02] rounded-[3rem] border border-foreground/10 hover:border-foreground/30 transition-all flex flex-col items-center">
+                <h3 className="text-3xl font-bold mb-4">Consider Sanuki</h3>
+                <p className="text-secondary mb-8">Looking for the best entry point? Explore the benefits of living and building in Sanuki City.</p>
+                <Link href="/sanuki" className="mt-auto px-8 py-3 border border-foreground rounded-full font-bold">
+                  Compare Locations
+                </Link>
               </div>
-            </div>
-
-            {/* Communities Subsection */}
-            <div className="bg-primary/5 rounded-[3rem] p-12 md:p-20">
-              <div className="max-w-3xl mb-16">
-                <span className="text-primary font-bold tracking-widest uppercase text-xs">Triple Support Ecosystem</span>
-                <h3 className="text-3xl md:text-4xl font-bold mt-4 mb-6">Built by Entrepreneurs, For Entrepreneurs</h3>
-                <p className="text-lg text-secondary">Sanuki isn't just a place; it's a network. Three distinct communities collaborate to ensure you have the right mentors, partners, and talent from day one.</p>
-              </div>
-
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  {
-                    name: "WAOJE Sanuki",
-                    type: "Global Japanese Network",
-                    desc: "A branch of the worldwide Japanese entrepreneur network. Perfect for connecting with founders who have successfully scaled from Japan to the world.",
-                    tags: ["Global Vision", "Japanese Excellence"]
-                  },
-                  {
-                    name: "Kagawa Innovation Base",
-                    type: "Inclusive Hub",
-                    desc: "The most open gateway for anyone interested in entrepreneurship in Kagawa. Fully accessible in English, bridging foreign founders with local innovators.",
-                    tags: ["English Support", "Local Integration"]
-                  },
-                  {
-                    name: "PLH Generative AI Club",
-                    type: "Deep-Tech Support",
-                    desc: "Master generative AI to become a high-efficiency solo-preneur or find your future CTO. This is where cutting-edge technology meets execution.",
-                    tags: ["AI Implementation", "CTO Matching"]
-                  }
-                ].map((community, i) => (
-                  <div key={i} className="bg-background rounded-3xl p-8 shadow-sm border border-foreground/5 hover:border-primary/30 transition-all group">
-                    <span className="text-primary text-xs font-bold px-2 py-1 rounded bg-primary/5 mb-4 inline-block">{community.type}</span>
-                    <h4 className="text-2xl font-bold mb-4">{community.name}</h4>
-                    <p className="text-sm text-secondary leading-relaxed mb-6 italic">"{community.desc}"</p>
-                    <div className="flex flex-wrap gap-2">
-                      {community.tags.map((tag, j) => (
-                        <span key={j} className="text-[10px] font-bold text-foreground/40 uppercase tracking-tighter border border-foreground/10 px-2 py-0.5 rounded-full">
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Comparison Section */}
-        <section id="comparison" className="py-24 bg-foreground/5">
-          <div className="max-w-5xl mx-auto px-6">
-            <h2 className="text-3xl md:text-5xl font-bold text-center mb-16 italic font-serif text-secondary">A Paradigm Shift in Startup Migration</h2>
-            <div className="overflow-x-auto rounded-3xl border border-foreground/10 bg-background shadow-2xl">
-              <table className="w-full text-left">
-                <thead>
-                  <tr className="border-b border-foreground/10 bg-foreground/[0.02]">
-                    <th className="p-8 text-xl font-bold">Priority</th>
-                    <th className="p-8 text-xl font-bold text-secondary italic">Standard Path</th>
-                    <th className="p-8 text-xl font-bold text-primary">NewGaijinPot (Sanuki Focus)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-foreground/5">
-                  {[
-                    ["Office Entry", "High Rent / Slow Screenings", "Instant Compliance in Sanuki"],
-                    ["Visa Process", "Lawyer-dependent & Opaque", "AI-Driven Self-Application Tools"],
-                    ["Family Stability", "High-Cost Urban Struggle", "Elite Schooling / Low Cost of Living"],
-                    ["Talent Pipeline", "Competitive & Generic", "Direct Matching with Global Talent"],
-                    ["Community", "Isolated & Fragmented", "3 Interlocked Local Communities"]
-                  ].map((row, i) => (
-                    <tr key={i} className="group">
-                      <td className="p-8 font-semibold">{row[0]}</td>
-                      <td className="p-8 text-secondary italic">{row[1]}</td>
-                      <td className="p-8 text-primary font-bold">{row[2]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
           </div>
         </section>
@@ -213,16 +109,14 @@ export default function Home() {
         {/* CTA Section */}
         <section id="contact" className="py-32 relative overflow-hidden bg-foreground text-background">
           <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-            <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Build in Sanuki?</h2>
+            <h2 className="text-4xl md:text-6xl font-bold mb-8">Start Your Japan Journey</h2>
             <p className="text-background/60 text-xl mb-12">
-              Start your journey with our AI Visa tool or book a tour of our Sanuki City hub.
+              Join the waiting list for our next intake and gain access to our AI tools.
             </p>
-            <div className="hidden md:flex items-center gap-8">
-              <Link href="/founders" className="text-sm font-bold text-primary hover:underline underline-offset-4">For Founders</Link>
-              <Link href="#solution" className="text-sm font-medium hover:text-primary transition-colors">Our Solution</Link>
-              <Link href="#contact" className="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-                Join Waitlist
-              </Link>
+            <div className="flex justify-center">
+              <button className="px-12 py-5 bg-primary text-white rounded-full font-black text-xl hover:scale-105 transition-transform">
+                Join the Community
+              </button>
             </div>
           </div>
         </section>

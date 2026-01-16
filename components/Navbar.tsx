@@ -8,11 +8,10 @@ export default function Navbar() {
                     NewGaijinPot<span className="text-foreground">.</span>
                 </Link>
                 <div className="hidden md:flex items-center gap-8">
-                    <Link href="#problem" className="text-sm font-medium hover:text-primary transition-colors">The Problem</Link>
-                    <Link href="#solution" className="text-sm font-medium hover:text-primary transition-colors">Our Solution</Link>
-                    <Link href="#comparison" className="text-sm font-medium hover:text-primary transition-colors">Compare</Link>
+                    <Link href="/founders" className="text-sm font-medium hover:text-primary transition-colors">For Founders</Link>
+                    <Link href="/sanuki" className="text-sm font-medium hover:text-primary transition-colors">Sanuki Choice</Link>
                     <Link href="#contact" className="px-5 py-2.5 bg-primary text-white rounded-full text-sm font-semibold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
-                        Get Started
+                        Join Waitlist
                     </Link>
                 </div>
             </div>
