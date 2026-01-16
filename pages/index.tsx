@@ -168,7 +168,13 @@ export default function Home() {
       </main>
 
       <footer className="py-12 border-t border-foreground/5 text-center text-secondary text-sm">
-        <p>© 2026 Kirirom Group - Nihon Gateway Project. All rights reserved.</p>
+        <div className="max-w-7xl mx-auto px-6">
+          <p className="mb-4">© 2026 Kirirom Group - Nihon Gateway Project. All rights reserved.</p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 opacity-60 text-[10px] uppercase tracking-widest font-medium">
+            <span>Recruitment License: Kirirom Digital Co., Ltd.</span>
+            <span>Real Estate License: vKirirom Japan Co., Ltd.</span>
+          </div>
+        </div>
       </footer>
     </div>
   );
