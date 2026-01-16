@@ -28,7 +28,7 @@ export default function Home() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <button className="px-8 py-4 bg-primary text-white rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-xl shadow-primary/30">
-                  Start AI Visa Application
+                  Start with Claude Code
                 </button>
                 <button className="px-8 py-4 border border-foreground/10 rounded-full font-bold text-lg hover:bg-foreground/5 transition-colors">
                   Explore Sanuki City
@@ -63,8 +63,8 @@ export default function Home() {
               {[
                 {
                   title: "Global & National",
-                  desc: "AI-driven visa tools for Founders and a talent hub that connects global minds with your startup in Japan.",
-                  features: ["AI Visa Self-App", "Talent Matching", "Market Data"],
+                  desc: "Claude Code powered visa tools for Founders and a talent hub that connects global minds with your startup in Japan.",
+                  features: ["Claude Code Visa Engine", "Talent Matching", "Market Data"],
                   icon: "🌐"
                 },
                 {
