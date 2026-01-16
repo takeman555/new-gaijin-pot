@@ -113,7 +113,7 @@ export default function Sanuki() {
                 <section className="py-32 bg-foreground text-background">
                     <div className="max-w-4xl mx-auto px-6 text-center">
                         <h2 className="text-4xl md:text-6xl font-black mb-8 italic">Sanuki is Ready. Are You?</h2>
-                        <p className="text-background/60 text-xl mb-12">Try our "Workaway" program. Stay for 1 month, see if it fits.</p>
+                        <p className="text-background/60 text-xl mb-12">Perfect for Working Holiday Visa holders. Stay for 1 month, see if it fits.</p>
                         <button className="px-12 py-5 bg-primary text-white rounded-full font-black text-xl hover:scale-105 transition-transform shadow-2xl">
                             Apply for PLH Sanuki Residency
                         </button>

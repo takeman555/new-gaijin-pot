@@ -138,8 +138,8 @@ export default function Home() {
             <div className="mt-16 bg-gradient-to-r from-primary to-blue-600 rounded-[3rem] p-10 md:p-16 text-white text-center">
               <h3 className="text-3xl font-bold mb-6">Need a place to think?</h3>
               <p className="text-lg opacity-90 max-w-2xl mx-auto mb-10">
-                If you don't have a visa yet, or just want to test your fit in Japan, come to our <strong>Sanuki City Hub</strong>.
-                Stay for 1-3 months, learn the culture, and plan your career with our "Workaway" model.
+                If you don't have a long-term visa yet, or just want to test your fit in Japan, come to our <strong>Sanuki City Hub</strong>.
+                Stay for 1-3 months using a Working Holiday visa, learn the culture, and plan your career.
               </p>
               <Link href="/sanuki" className="inline-block px-10 py-4 bg-white text-primary rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
                 Check Sanuki Hub Program
